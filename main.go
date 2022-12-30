@@ -103,10 +103,6 @@ func gradient_descent(x1_train []float64, x2_train []float64, x3_train []float64
 	for i := 0; i < limit; i++ {
 		dj_dw1, dj_dw2, dj_dw3, dj_dw5, dj_db := compute_cost(x1_train, x2_train, x3_train, x5_train, w1, w2, w3, w5, b, y_train)
 
-		/* 		if i == 1 || i == 100000 || i == 200000 || i == 300000 || i == 400000 || i == 500000 || i == 600000 || i == 700000 || i == 800000 || i == 900000 || i == 1000000 {
-			fmt.Printf("%.15f, %.15f, %.15f, %.15f, %.15f\n", dj_dw1, dj_dw2, dj_dw3, dj_dw5, dj_db)
-		} */
-
 		w1_t = w1 - alpha*dj_dw1
 		w2_t = w2 - alpha*dj_dw2
 		w3_t = w3 - alpha*dj_dw3
